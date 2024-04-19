@@ -13,7 +13,7 @@ public class TaskServiceImpl extends AbstractGenericService<Task, TaskDto, Long>
 
     private static final String NOT_FOUND_STATUS_MESSAGE = "Tarea no encontrada";
 
-    protected TaskServiceImpl(TaskRepository taskRepository, TaskMapper taskMapper, String notFoundMessage) {
+    protected TaskServiceImpl(TaskRepository taskRepository, TaskMapper taskMapper) {
         super(taskRepository, taskMapper, NOT_FOUND_STATUS_MESSAGE );
     }
 }
