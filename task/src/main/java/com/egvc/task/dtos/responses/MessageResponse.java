@@ -1,4 +1,4 @@
-package com.egvc.task.dtos;
+package com.egvc.task.dtos.responses;
 
 import lombok.Builder;
 
