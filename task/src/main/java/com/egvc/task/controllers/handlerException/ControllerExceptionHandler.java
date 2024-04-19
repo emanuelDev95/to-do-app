@@ -1,6 +1,6 @@
 package com.egvc.task.controllers.handlerException;
 
-import com.egvc.msproducts.dtos.ErrorMessageResponse;
+import com.egvc.task.dtos.ErrorMessageResponse;
 import com.egvc.task.exceptions.ResourceNotFoundException;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.HttpStatus;

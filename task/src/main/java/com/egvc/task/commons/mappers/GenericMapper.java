@@ -1,7 +1,7 @@
 package com.egvc.task.commons.mappers;
 
 
-import com.egvc.msproducts.commons.entities.AbstractEntity;
+import com.egvc.task.commons.entities.AbstractEntity;
 
 public interface GenericMapper<D,E extends AbstractEntity> {
 

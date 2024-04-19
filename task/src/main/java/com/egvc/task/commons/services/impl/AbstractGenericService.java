@@ -1,9 +1,10 @@
 package com.egvc.task.commons.services.impl;
 
-import com.egvc.msproducts.commons.entities.AbstractEntity;
-import com.egvc.msproducts.commons.mappers.GenericMapper;
-import com.egvc.msproducts.commons.services.GenericService;
-import com.egvc.msproducts.exceptions.ResourceNotFoundException;
+
+import com.egvc.task.commons.entities.AbstractEntity;
+import com.egvc.task.commons.mappers.GenericMapper;
+import com.egvc.task.commons.services.GenericService;
+import com.egvc.task.exceptions.ResourceNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 
