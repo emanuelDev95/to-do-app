@@ -92,6 +92,10 @@ export class FormComponent implements OnInit {
   
   }
 
+  public back(){
+    this.location.back()
+  }
+
 
 
   

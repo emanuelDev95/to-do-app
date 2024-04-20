@@ -4,12 +4,12 @@ import { TaskService } from '../services/task.service';
 import { RouterModule } from '@angular/router';
 import { MessageResponse } from '../../models/response';
 import { Observable, map } from 'rxjs';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RouterModule, AsyncPipe],
+  imports: [RouterModule, AsyncPipe, DatePipe],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
