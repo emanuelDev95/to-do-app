@@ -1,0 +1,54 @@
+<!-- component -->
+<!-- Create by joker banny -->
+<div class="h-screen bg-indigo-100 flex justify-center items-center">
+	<div class="lg:w-2/5 md:w-1/2 w-2/3">
+        <h1 class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Tasks</h1>
+    
+        <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
+            <tr class="text-left border-b-2 border-gray-300">
+                <th class="px-4 py-3">ID</th>
+                <th class="px-4 py-3">Title</th>
+                <th class="px-4 py-3">Description</th>
+                <th class="px-4 py-3">Due</th>
+                <th class="px-4 py-3">Status</th>
+                <th class="px-4 py-3">Actions</th>
+            </tr>
+
+            @for (task of tasks |async;  track task.id ) {
+                <tr class="bg-gray-100 border-b border-gray-200">
+                    <td class="px-4 py-3"> {{task.id}} </td>
+                    <td class="px-4 py-3"> {{task.title}} </td>
+                    <td class="px-4 py-3"> {{task.description}} </td>
+                    <td class="px-4 py-3"> {{task.due}} </td>
+                    <td class="px-4 py-3"> {{task.status.status}} </td>
+                    <td class="px-4 py-3">
+                        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded margin-left: 0px;"
+                            [routerLink]="['/task/form', task.id]">
+                            Editar
+                        </button>
+                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded margin-left: 0px;"
+                        (click)="deleteTask(task.id)">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr> 
+        
+            }@empty {
+        
+                <tr class="bg-gray-100 border-b border-gray-200">
+                    <td colspan="6" class="px-4 py-3 text-center"> Datos no encotrados </td>
+                </tr>
+            }
+            </table>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded margin-left: 0px;"
+                    routerLink="/task/form">
+                Crear
+            </button>
+	</div>
+</div>
+
+
+
+
+
+

@@ -14,7 +14,7 @@ import lombok.*;
 public class Status extends AbstractEntity<Long> {
     private static final long serialVersionUID = 1L;
 
-    @Column(nullable = false, name = "estado")
+    @Column( name = "estado")
     private String status;
 
 }
